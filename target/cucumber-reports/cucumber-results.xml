@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="8" time="6.725169">
+<testcase classname="FindCapital on the basis of name and code" name="Performing GET method" time="3.528341">
+<system-out><![CDATA[Given Set Get  Service Api "https://restcountries.eu/rest/v2/alpha".........passed
+When Set request HEADER.....................................................passed
+And User Sends the GET HTTP Request with code "NO"..........................passed
+Then Recieve valid HTTP Response Code "200".................................passed
+And validate capital for given inputvalue "Oslo"............................passed
+]]></system-out>
+</testcase>
+<testcase classname="FindCapital on the basis of name and code" name="Performing GET method 2" time="0.449369">
+<system-out><![CDATA[Given Set Get  Service Api "https://restcountries.eu/rest/v2/alpha".........passed
+When Set request HEADER.....................................................passed
+And User Sends the GET HTTP Request with code "AL"..........................passed
+Then Recieve valid HTTP Response Code "200".................................passed
+And validate capital for given inputvalue "Mariehamn".......................passed
+]]></system-out>
+</testcase>
+<testcase classname="FindCapital on the basis of name and code" name="Performing GET method 3" time="0.301851">
+<system-out><![CDATA[Given Set Get  Service Api "https://restcountries.eu/rest/v2/alpha".........passed
+When Set request HEADER.....................................................passed
+And User Sends the GET HTTP Request with code "EUR".........................passed
+Then Recieve valid HTTP Response Code "404".................................passed
+And validate capital for given inputvalue "Åland Islands"...................passed
+]]></system-out>
+</testcase>
+<testcase classname="FindCapital on the basis of name and code" name="Performing GET method 4" time="0.383047">
+<system-out><![CDATA[Given Set Get  Service Api "https://restcountries.eu/rest/v2/alpha".........passed
+When Set request HEADER.....................................................passed
+And User Sends the GET HTTP Request with code "DZD".........................passed
+Then Recieve valid HTTP Response Code "404".................................passed
+And validate capital for given inputvalue "Algeria".........................passed
+]]></system-out>
+</testcase>
+<testcase classname="FindCapital on the basis of name and code" name="Performing GET by name method" time="0.413424">
+<system-out><![CDATA[Given Set Get  Service Api "https://restcountries.eu/rest/v2/name"..........passed
+When Set request HEADER.....................................................passed
+And User Sends the GET HTTP Request with name "Norway"......................passed
+Then Recieve valid HTTP Response Code "200".................................passed
+And validate capital for given inputvalue "Oslo"............................passed
+]]></system-out>
+</testcase>
+<testcase classname="FindCapital on the basis of name and code" name="Performing GET by name method 2" time="0.348221">
+<system-out><![CDATA[Given Set Get  Service Api "https://restcountries.eu/rest/v2/name"..........passed
+When Set request HEADER.....................................................passed
+And User Sends the GET HTTP Request with name "Åland Islands"...............passed
+Then Recieve valid HTTP Response Code "200".................................passed
+And validate capital for given inputvalue "Mariehamn".......................passed
+]]></system-out>
+</testcase>
+<testcase classname="FindCapital on the basis of name and code" name="Performing GET by name method 3" time="0.63988">
+<system-out><![CDATA[Given Set Get  Service Api "https://restcountries.eu/rest/v2/name"..........passed
+When Set request HEADER.....................................................passed
+And User Sends the GET HTTP Request with name "Afghanistan".................passed
+Then Recieve valid HTTP Response Code "200".................................passed
+And validate capital for given inputvalue "Kabul"...........................passed
+]]></system-out>
+</testcase>
+<testcase classname="FindCapital on the basis of name and code" name="Performing GET by name method 4" time="0.661036">
+<system-out><![CDATA[Given Set Get  Service Api "https://restcountries.eu/rest/v2/name"..........passed
+When Set request HEADER.....................................................passed
+And User Sends the GET HTTP Request with name "Algeria".....................passed
+Then Recieve valid HTTP Response Code "200".................................passed
+And validate capital for given inputvalue "Algiers".........................passed
+]]></system-out>
+</testcase>
+</testsuite>

@@ -1,0 +1,75 @@
+Feature: FindCapital on the basis of name and code
+
+  Scenario Outline: Performing GET method                  [90m# src/main/java/com/teckarch/findcapitalrestcountries/findcapital.feature:3[0m
+    [36mGiven [0m[36mSet Get  Service Api "<endpoint>"[0m
+    [36mWhen [0m[36mSet request HEADER[0m
+    [36mAnd [0m[36mUser Sends the GET HTTP Request with code "<code>"[0m
+    [36mThen [0m[36mRecieve valid HTTP Response Code "<statuscode>"[0m
+    [36mAnd [0m[36mvalidate capital for given inputvalue "<capital>"[0m
+
+    Examples: 
+
+  Scenario Outline: Performing GET method                               [90m# src/main/java/com/teckarch/findcapitalrestcountries/findcapital.feature:12[0m
+    [32mGiven [0m[32mSet Get  Service Api "[0m[32m[1mhttps://restcountries.eu/rest/v2/alpha[0m[32m"[0m [90m# StepDefinitionCapital.set_Get_Service_Api(String)[0m
+    [32mWhen [0m[32mSet request HEADER[0m                                             [90m# StepDefinitionCapital.set_request_HEADER()[0m
+    [32mAnd [0m[32mUser Sends the GET HTTP Request with code "[0m[32m[1mNO[0m[32m"[0m                  [90m# StepDefinitionCapital.user_Sends_the_GET_HTTP_Request_with(String)[0m
+    [32mThen [0m[32mRecieve valid HTTP Response Code "[0m[32m[1m200[0m[32m"[0m                         [90m# StepDefinitionCapital.recieve_valid_HTTP_Response_Code(int)[0m
+    [32mAnd [0m[32mvalidate capital for given inputvalue "[0m[32m[1mOslo[0m[32m"[0m                    [90m# StepDefinitionCapital.validate_capital_for_given_inputvalue(String)[0m
+
+  Scenario Outline: Performing GET method                               [90m# src/main/java/com/teckarch/findcapitalrestcountries/findcapital.feature:13[0m
+    [32mGiven [0m[32mSet Get  Service Api "[0m[32m[1mhttps://restcountries.eu/rest/v2/alpha[0m[32m"[0m [90m# StepDefinitionCapital.set_Get_Service_Api(String)[0m
+    [32mWhen [0m[32mSet request HEADER[0m                                             [90m# StepDefinitionCapital.set_request_HEADER()[0m
+    [32mAnd [0m[32mUser Sends the GET HTTP Request with code "[0m[32m[1mAL[0m[32m"[0m                  [90m# StepDefinitionCapital.user_Sends_the_GET_HTTP_Request_with(String)[0m
+    [32mThen [0m[32mRecieve valid HTTP Response Code "[0m[32m[1m200[0m[32m"[0m                         [90m# StepDefinitionCapital.recieve_valid_HTTP_Response_Code(int)[0m
+    [32mAnd [0m[32mvalidate capital for given inputvalue "[0m[32m[1mMariehamn[0m[32m"[0m               [90m# StepDefinitionCapital.validate_capital_for_given_inputvalue(String)[0m
+
+  Scenario Outline: Performing GET method                               [90m# src/main/java/com/teckarch/findcapitalrestcountries/findcapital.feature:14[0m
+    [32mGiven [0m[32mSet Get  Service Api "[0m[32m[1mhttps://restcountries.eu/rest/v2/alpha[0m[32m"[0m [90m# StepDefinitionCapital.set_Get_Service_Api(String)[0m
+    [32mWhen [0m[32mSet request HEADER[0m                                             [90m# StepDefinitionCapital.set_request_HEADER()[0m
+    [32mAnd [0m[32mUser Sends the GET HTTP Request with code "[0m[32m[1mEUR[0m[32m"[0m                 [90m# StepDefinitionCapital.user_Sends_the_GET_HTTP_Request_with(String)[0m
+    [32mThen [0m[32mRecieve valid HTTP Response Code "[0m[32m[1m404[0m[32m"[0m                         [90m# StepDefinitionCapital.recieve_valid_HTTP_Response_Code(int)[0m
+    [32mAnd [0m[32mvalidate capital for given inputvalue "[0m[32m[1mÅland Islands[0m[32m"[0m           [90m# StepDefinitionCapital.validate_capital_for_given_inputvalue(String)[0m
+
+  Scenario Outline: Performing GET method                               [90m# src/main/java/com/teckarch/findcapitalrestcountries/findcapital.feature:15[0m
+    [32mGiven [0m[32mSet Get  Service Api "[0m[32m[1mhttps://restcountries.eu/rest/v2/alpha[0m[32m"[0m [90m# StepDefinitionCapital.set_Get_Service_Api(String)[0m
+    [32mWhen [0m[32mSet request HEADER[0m                                             [90m# StepDefinitionCapital.set_request_HEADER()[0m
+    [32mAnd [0m[32mUser Sends the GET HTTP Request with code "[0m[32m[1mDZD[0m[32m"[0m                 [90m# StepDefinitionCapital.user_Sends_the_GET_HTTP_Request_with(String)[0m
+    [32mThen [0m[32mRecieve valid HTTP Response Code "[0m[32m[1m404[0m[32m"[0m                         [90m# StepDefinitionCapital.recieve_valid_HTTP_Response_Code(int)[0m
+    [32mAnd [0m[32mvalidate capital for given inputvalue "[0m[32m[1mAlgeria[0m[32m"[0m                 [90m# StepDefinitionCapital.validate_capital_for_given_inputvalue(String)[0m
+
+  Scenario Outline: Performing GET by name method          [90m# src/main/java/com/teckarch/findcapitalrestcountries/findcapital.feature:17[0m
+    [36mGiven [0m[36mSet Get  Service Api "<endpoint>"[0m
+    [36mWhen [0m[36mSet request HEADER[0m
+    [36mAnd [0m[36mUser Sends the GET HTTP Request with name "<name>"[0m
+    [36mThen [0m[36mRecieve valid HTTP Response Code "<statuscode>"[0m
+    [36mAnd [0m[36mvalidate capital for given inputvalue "<capital>"[0m
+
+    Examples: 
+
+  Scenario Outline: Performing GET by name method                      [90m# src/main/java/com/teckarch/findcapitalrestcountries/findcapital.feature:26[0m
+    [32mGiven [0m[32mSet Get  Service Api "[0m[32m[1mhttps://restcountries.eu/rest/v2/name[0m[32m"[0m [90m# StepDefinitionCapital.set_Get_Service_Api(String)[0m
+    [32mWhen [0m[32mSet request HEADER[0m                                            [90m# StepDefinitionCapital.set_request_HEADER()[0m
+    [32mAnd [0m[32mUser Sends the GET HTTP Request with name "[0m[32m[1mNorway[0m[32m"[0m             [90m# StepDefinitionCapital.user_sends_the_get_http_request_with_name_something(String)[0m
+    [32mThen [0m[32mRecieve valid HTTP Response Code "[0m[32m[1m200[0m[32m"[0m                        [90m# StepDefinitionCapital.recieve_valid_HTTP_Response_Code(int)[0m
+    [32mAnd [0m[32mvalidate capital for given inputvalue "[0m[32m[1mOslo[0m[32m"[0m                   [90m# StepDefinitionCapital.validate_capital_for_given_inputvalue(String)[0m
+
+  Scenario Outline: Performing GET by name method                      [90m# src/main/java/com/teckarch/findcapitalrestcountries/findcapital.feature:27[0m
+    [32mGiven [0m[32mSet Get  Service Api "[0m[32m[1mhttps://restcountries.eu/rest/v2/name[0m[32m"[0m [90m# StepDefinitionCapital.set_Get_Service_Api(String)[0m
+    [32mWhen [0m[32mSet request HEADER[0m                                            [90m# StepDefinitionCapital.set_request_HEADER()[0m
+    [32mAnd [0m[32mUser Sends the GET HTTP Request with name "[0m[32m[1mÅland Islands[0m[32m"[0m      [90m# StepDefinitionCapital.user_sends_the_get_http_request_with_name_something(String)[0m
+    [32mThen [0m[32mRecieve valid HTTP Response Code "[0m[32m[1m200[0m[32m"[0m                        [90m# StepDefinitionCapital.recieve_valid_HTTP_Response_Code(int)[0m
+    [32mAnd [0m[32mvalidate capital for given inputvalue "[0m[32m[1mMariehamn[0m[32m"[0m              [90m# StepDefinitionCapital.validate_capital_for_given_inputvalue(String)[0m
+
+  Scenario Outline: Performing GET by name method                      [90m# src/main/java/com/teckarch/findcapitalrestcountries/findcapital.feature:28[0m
+    [32mGiven [0m[32mSet Get  Service Api "[0m[32m[1mhttps://restcountries.eu/rest/v2/name[0m[32m"[0m [90m# StepDefinitionCapital.set_Get_Service_Api(String)[0m
+    [32mWhen [0m[32mSet request HEADER[0m                                            [90m# StepDefinitionCapital.set_request_HEADER()[0m
+    [32mAnd [0m[32mUser Sends the GET HTTP Request with name "[0m[32m[1mAfghanistan[0m[32m"[0m        [90m# StepDefinitionCapital.user_sends_the_get_http_request_with_name_something(String)[0m
+    [32mThen [0m[32mRecieve valid HTTP Response Code "[0m[32m[1m200[0m[32m"[0m                        [90m# StepDefinitionCapital.recieve_valid_HTTP_Response_Code(int)[0m
+    [32mAnd [0m[32mvalidate capital for given inputvalue "[0m[32m[1mKabul[0m[32m"[0m                  [90m# StepDefinitionCapital.validate_capital_for_given_inputvalue(String)[0m
+
+  Scenario Outline: Performing GET by name method                      [90m# src/main/java/com/teckarch/findcapitalrestcountries/findcapital.feature:29[0m
+    [32mGiven [0m[32mSet Get  Service Api "[0m[32m[1mhttps://restcountries.eu/rest/v2/name[0m[32m"[0m [90m# StepDefinitionCapital.set_Get_Service_Api(String)[0m
+    [32mWhen [0m[32mSet request HEADER[0m                                            [90m# StepDefinitionCapital.set_request_HEADER()[0m
+    [32mAnd [0m[32mUser Sends the GET HTTP Request with name "[0m[32m[1mAlgeria[0m[32m"[0m            [90m# StepDefinitionCapital.user_sends_the_get_http_request_with_name_something(String)[0m
+    [32mThen [0m[32mRecieve valid HTTP Response Code "[0m[32m[1m200[0m[32m"[0m                        [90m# StepDefinitionCapital.recieve_valid_HTTP_Response_Code(int)[0m
+    [32mAnd [0m[32mvalidate capital for given inputvalue "[0m[32m[1mAlgiers[0m[32m"[0m                [90m# StepDefinitionCapital.validate_capital_for_given_inputvalue(String)[0m
